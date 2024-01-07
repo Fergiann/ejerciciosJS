@@ -1,0 +1,24 @@
+const streamers = [
+  { name: "Rubius", age: 32, gameMorePlayed: "Minecraft" },
+  { name: "Ibai", age: 25, gameMorePlayed: "League of Legends" },
+  { name: "Reven", age: 43, gameMorePlayed: "League of Legends" },
+  { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
+];
+
+const arrayStreamers = streamers.filter(streamer => 
+    streamer.gameMorePlayed.includes('Legends'))
+    
+console.log(arrayStreamers)
+
+const streamerViejo = arrayStreamers.map((streamer) => streamer.age>35 ? streamer.gameMorePlayed.toUpperCase() :streamer) 
+
+console.log(streamerViejo)
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,6 @@
+const goodProducts = [];
+const badProducts = [];
+
 const products = [
   { name: "Gorra de rodilla", sellCount: 10 },
   { name: "Pantalón de pana", sellCount: 302 },
@@ -5,13 +8,17 @@ const products = [
   { name: "Inpar de zapatos", sellCount: 6 },
 ];
 
-let total = 0;
-
 for (let index = 0; index < products.length; index++) {
     const element = products[index];
-    
-    total+= element.sellCount;
+    if(element.sellCount>20){
+        goodProducts.push(element)
+    }
+     if(element.sellCount<20){
+        badProducts.push(element)
+     }
+        
     
 }
 
-console.log(total/4)
+console.log(goodProducts)
+console.log(badProducts)
